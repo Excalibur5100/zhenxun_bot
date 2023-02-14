@@ -99,6 +99,11 @@ __plugin_configs__ = {
     "SHOW_INFO": {"value": True, "help": "是否显示色图的基本信息，如PID等", "default_value": True},
     "ALLOW_GROUP_R18": {"value": False, "help": "在群聊中启用R18权限", "default_value": False},
 }
+ "MAX_ONCE_NUM2FORWARD": {
+        "value": None,
+        "help": "单次发送的图片数量达到指定值时转发为合并消息",
+        "default_value": None,
+    },
 Config.add_plugin_config("pixiv", "PIXIV_NGINX_URL", "i.pixiv.re", help_="Pixiv反向代理")
 
 setu_data_list = []
