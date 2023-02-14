@@ -254,6 +254,7 @@ async def send_setu_handle(
         if code == 200:
             for i in range(len(urls)):
                 try:
+                    forward_list = []
                     setu_img, index = await search_online_setu(urls[i])
                     # 下载成功的话
                     if index != -1:
