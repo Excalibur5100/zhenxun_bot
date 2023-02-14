@@ -318,6 +318,7 @@ async def get_user_dynamic(
         dynamic_upload_time = dynamic_info["cards"][0]["desc"]["timestamp"]
         if local_user.dynamic_upload_time < dynamic_upload_time:
             page = await browser.new_page()
+            dynamic_id = dynamic_info["cards"][0]["desc"]["dynamic_id"]
             try:
                 await page.goto(
                     f"https://space.bilibili.com/{local_user.uid}/dynamic",
